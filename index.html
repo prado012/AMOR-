@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Namoro</title>
+    <style>
+        body {
+            background-color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .sim {
+            background-color: lightgreen;
+            color: white;
+        }
+        .nao {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quer namorar comigo?</h1>
+    <button class="button sim" onclick="tentarSim()">Sim</button>
+    <button class="button nao" onclick="erroNao()">Não</button>
+
+    <script>
+        let tentativas = 0;
+        function tentarSim() {
+            tentativas++;
+            if (tentativas < 4) {
+                alert("Erro ao aceitar! Parece que o destino quer te testar 😆. Tente de novo!");
+            } else {
+                window.location.replace('contrato.html');
+            }
+        }
+
+        function erroNao() {
+            alert("Você não tem essa opção! kkkkk");
+        }
+    </script>
+</body>
+</html>
